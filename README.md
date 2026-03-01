@@ -70,7 +70,7 @@ http://127.0.0.1:8000
 Depois que o projeto já está configurado, use estes comandos sempre que quiser rodar o servidor:
 ```bash
 # 1. Navegue até a pasta do projeto
-cd cepedi-curso
+cd cursoCepedi
 
 # 2. Ative o ambiente virtual
 venv\Scripts\activate
