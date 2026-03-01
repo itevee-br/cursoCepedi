@@ -63,6 +63,27 @@ O sistema estará disponível em:
 ```
 http://127.0.0.1:8000
 ```
+## 📱 Screenshots do Projeto
+
+### 1. 🔐 Primeiro Login
+> Tela exibida no primeiro acesso ao sistema
+<br>
+<img src="https://raw.githubusercontent.com/itevee-br/cursoCepedi/refs/heads/master/escola/staticfiles/admin/img/primeiroLogin.jpeg" width="600">
+
+### 2. 📝 Cadastro de Aluno
+> Formulário para registro de novos alunos
+<br>
+<img src="https://raw.githubusercontent.com/itevee-br/cursoCepedi/refs/heads/master/escola/staticfiles/admin/img/cadastroAluno.jpeg" width="600">
+
+### 3. 📱 Menu Logado
+> Interface principal após o login do usuário
+<br>
+<img src="https://raw.githubusercontent.com/itevee-br/cursoCepedi/refs/heads/master/escola/staticfiles/admin/img/menuLogado.jpeg" width="600">
+
+### 4. 👥 Alunos Cadastrados
+> Visualização da lista de alunos já matriculados no sistema
+<br>
+<img src="https://raw.githubusercontent.com/itevee-br/cursoCepedi/refs/heads/master/escola/staticfiles/admin/img/alunosCadastrados.jpeg" width="600">
 
 ---
 
