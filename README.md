@@ -3,7 +3,7 @@
 ### 1️⃣ Clonar o Repositório
 
 ```bash
-git clone (link_do_repositorio)
+git clone https://github.com/itevee-br/cursoCepedi.git
 cd cursoCepedi/escola
 ```
 
@@ -70,7 +70,7 @@ http://127.0.0.1:8000
 Depois que o projeto já está configurado, use estes comandos sempre que quiser rodar o servidor:
 ```bash
 # 1. Navegue até a pasta do projeto
-cd cepedi-curso
+cd cursoCepedi
 
 # 2. Ative o ambiente virtual
 venv\Scripts\activate
