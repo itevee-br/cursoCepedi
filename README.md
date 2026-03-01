@@ -3,7 +3,7 @@
 ### 1️⃣ Clonar o Repositório
 
 ```bash
-git clone (link_do_repositorio)
+git clone https://github.com/itevee-br/cursoCepedi.git
 cd cursoCepedi/escola
 ```
 
