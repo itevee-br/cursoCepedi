@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bem vindo</title>
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0a0c0e;
+        background-image: 
+            repeating-linear-gradient(30deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 30px),
+            repeating-linear-gradient(-30deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 30px),
+            radial-gradient(circle at 30% 50%, rgba(255,255,255,0.02) 0%, transparent 50%),
+            radial-gradient(circle at 70% 30%, rgba(255,255,255,0.02) 0%, transparent 50%);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        position: relative;
+    }
+
+    fieldset {
+        width: auto;
+        min-width: 300px;
+        max-width: 800px;
+        padding: 30px;
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: 20px;
+        background: rgba(18,22,28,0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        position: relative;
+        z-index: 1;
+    }
+
+    legend {
+        text-align: center;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    legend h1 { margin: 0; font-size: 1.8rem; }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .python-logo {
+        width: 40px;
+        height: 40px;
+        filter: drop-shadow(0 0 10px rgba(255,215,0,0.3));
+    }
+
+    .title-container h1 {
+        margin: 0;
+        font-size: 1.4rem;
+        background: linear-gradient(135deg, #ffffff, #a0aec0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Container da lista */
+    ol {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens horizontalmente */
+        gap: 10px;
+    }
+
+    /* Itens da lista */
+    li {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo do li */
+    }
+
+    /* Estilo base para links e botões */
+    a, button {
+        display: block;
+        width: fit-content;
+        min-width: 200px; /* Largura mínima igual para todos */
+        max-width: 100%; /* Para não estourar em telas pequenas */
+        text-decoration: none;
+        color: #e2e8f0;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.05);
+        padding: 12px 20px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-align: center;
+        margin: 0; /* Remove margens individuais */
+        cursor: pointer;
+    }
+
+    a:hover, button:hover {
+        background: rgba(255,255,255,0.08);
+        border-color: rgba(255,255,255,0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        color: #ffffff;
+    }
+
+    /* Botão de logout específico */
+    button[type="submit"] {
+        background: linear-gradient(135deg, #dc2626, #b91c1c);
+        box-shadow: 0 4px 12px rgba(220,38,38,0.2);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: white;
+        width: fit-content;
+        min-width: 200px;
+        max-width: 100%;
+    }
+
+    button[type="submit"]:hover {
+        background: linear-gradient(135deg, #ef4444, #dc2626);
+        box-shadow: 0 8px 20px rgba(220,38,38,0.3);
+    }
+
+    /* Remove o width:100% do button padrão */
+    button:not([type="submit"]) {
+        width: fit-content;
+        min-width: 200px;
+        max-width: 100%;
+    }
+
+    /* Form dentro do li para o logout */
+    li form {
+        display: flex;
+        justify-content: center; /* Centraliza o formulário */
+        width: 100%;
+    }
+
+    /* Remove estilos anteriores conflitantes */
+    a, button {
+        margin: 0;
+    }
+    
+    .tabela {
+        list-style: none;
+        margin-top: 20px;
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: 12px;
+        background: rgba(10,14,18,0.6);
+    }
+
+    .tabela li {
+        display: grid;
+        grid-template-columns: 2fr 0.8fr 2.5fr 1.2fr;
+        gap: 15px;
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        color: #e2e8f0;
+    }
+
+    .tabela li:last-child { border-bottom: none; }
+    .tabela li.header {
+        font-weight: 600;
+        background: rgba(255,255,255,0.03);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .nome { font-weight: 600; color: #ffffff !important; }
+    
+    .tabela li span:last-child {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        background: rgba(34,197,94,0.1);
+        color: #4ade80 !important;
+        border: 1px solid rgba(34,197,94,0.2);
+    }
+
+    .tabela li span:last-child:contains("Não"),
+    .matriculado-false {
+        background: rgba(239,68,68,0.1) !important;
+        color: #f87171 !important;
+        border: 1px solid rgba(239,68,68,0.2) !important;
+    }
+
+    form p { margin-bottom: 15px; color: #e2e8f0; }
+    form label { display: block; margin-bottom: 5px; color: #94a3b8; }
+    form input, form select, form textarea {
+        width: 100%;
+        padding: 12px 15px;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 10px;
+        color: #ffffff;
+    }
+
+    p { color: #e2e8f0; margin-bottom: 10px; }
+    p strong { color: #94a3b8; }
+
+    @media (max-width: 768px) {
+        .tabela li { grid-template-columns: 1fr; }
+        .tabela li.header { display: none; }
+        .tabela li span::before {
+            content: attr(data-label);
+            font-weight: 600;
+            color: #94a3b8;
+            min-width: 80px;
+        }
+        
+        a, button, button[type="submit"] {
+            min-width: 100%;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        fieldset { width: 90%; padding: 20px; }
+        .title-container { flex-direction: column; text-align: center; }
+    }
+</style>
+</head>
+<body>
+    <fieldset>
+        <!-- Título dentro da box principal, sem fundo separado -->
+        <div class="title-container">
+            <svg class="python-logo" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M63.5 9C38.5 9 40 21.5 40 21.5L40 34H63V39H29.5C29.5 39 9 35.5 9 61.5C9 87.5 28 85 28 85H38V72C38 72 37.5 58 52 58H76C76 58 88 57.5 88 45V24C88 24 90 9 63.5 9ZM51.5 19C55.2 19 58.5 22.4 58.5 26C58.5 29.6 55.2 33 51.5 33C47.8 33 44.5 29.6 44.5 26C44.5 22.4 47.8 19 51.5 19Z" fill="#3776AB"/>
+                <path d="M94.5 42C94.5 42 99 45.5 99 61.5C99 77.5 84 76 84 76H65V89C65 89 63 104 40 104C40 104 35 104 35 79C35 54 54 58 54 58H79C79 58 94.5 56 94.5 42Z" fill="#FFD43B"/>
+                <path d="M56 97C52.3 97 49 100.4 49 104C49 107.6 52.3 111 56 111C59.7 111 63 107.6 63 104C63 100.4 59.7 97 56 97Z" fill="#FFD43B"/>
+            </svg>
+            <h1>Plataforma feita com Python</h1>
+        </div>
+
+        <ol>
+            <li>
+                <a href="{% url 'lista' %}">📋 Listar Alunos</a>
+            </li>
+
+            <li>
+                <a href="{% url 'cadastrar' %}">➕ Adicionar Alunos</a>
+            </li>
+            
+            <li>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">🔓 Deslogar</button>
+                </form>
+            </li>
+        </ol>
+    </fieldset>
+</body>
+</html>
