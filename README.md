@@ -1,5 +1,9 @@
 # Trabalho do Curso CEPEDI
 
+---
+
+abaixo segue um guia passo a passo de como instalar e usar localmente.
+
 ### 1️⃣ Clonar o Repositório
 
 ```bash
